@@ -1,12 +1,10 @@
-using System;
-namespace Ucu.Poo.Excercise
+namespace Ejercicio_101
 {
-    public  class Program
+    public class Program
     {
         public static void Main()
         {
-            bool resultado = Circuito.Calcular(true, true, true);
-            Console.WriteLine($"Resultado {resultado}");
+            
         }
     }
 }
