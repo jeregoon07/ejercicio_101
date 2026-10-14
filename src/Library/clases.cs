@@ -1,3 +1,5 @@
+using System.Dynamic;
+
 namespace Ejercicio_101
 {
     public class Estudiante
@@ -10,17 +12,34 @@ namespace Ejercicio_101
             this.Documento=documento;
         }
     }
-    public class Equipo
-    {
-        public int Codigo{get;set;}
-        public string Modelo{get;set;}
-        public bool EstaDisponible;
-        public Equipo(int codigo, string modelo)
+        public class Equipo
         {
-            this.Codigo=codigo;
-            this.Modelo=modelo;
+            public int Codigo{get;set;}
+            public string Modelo{get;set;}
+            public bool EstaDisponible {get; set;}
+            
+            public Equipo(int codigo, string modelo)
+            {
+                this.Codigo=codigo;
+                this.Modelo=modelo;
+                EstaDisponible= true;
+            }
+
+            public void Prestar()
+        {
+            EstaDisponible=false;
+        }
+        public void Disponible()
+        {
+            EstaDisponible= true;
         }
     }
-    
+    public class Prestamo
+    {
+        public string EstudianteSolicitante{get;}
+        public string ModeloSolicitado{get;}
+        
+    }
+
     
 }
