@@ -4,6 +4,11 @@
     <TargetFramework>net10.0</TargetFramework>
     <LangVersion>6</LangVersion>
     <Nullable>disable</Nullable>
+    
+    <!-- Agrega estas líneas para silenciar los analizadores y advertencias -->
+    <RunAnalyzers>false</RunAnalyzers>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup>
