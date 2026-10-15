@@ -1,4 +1,6 @@
+using System;
 using System.Dynamic;
+using Microsoft.VisualBasic;
 
 namespace Ejercicio_101
 {
@@ -38,7 +40,15 @@ namespace Ejercicio_101
     {
         public string EstudianteSolicitante{get;}
         public string ModeloSolicitado{get;}
-        
+        public DateTime FechaDeEntrega{get;}
+        public DateTime FechaDeDevolucion{get;}
+        Prestamo(string estudianteSolicitante, string modeloSolicitado, int DiasParadevolver=7 )
+        {
+            EstudianteSolicitante=estudianteSolicitante;
+            ModeloSolicitado=modeloSolicitado;
+            
+        }
+
     }
 
     
