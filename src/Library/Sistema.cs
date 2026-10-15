@@ -10,9 +10,12 @@ namespace Ejercicio_101
     {
         public List<Equipo> equipos= new List<Equipo>();
         public List<Prestamo> prestamos= new List<Prestamo>();
-        public void RegistrarEquipo(Equipo equipo)
+        public void RegistrarEquipo(string modeloSolicitado)
         {
-            equipos.Add(equipo);
+            int nuevoCodigo= 1;
+            Equipo equipoLista= new Equipo(nuevoCodigo,modeloSolicitado);
+            equipos.Add(equipoLista);
+
         }
         public void Prestar(string estudianteSolicitante, string modeloSolicitado)
         {
