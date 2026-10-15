@@ -1,4 +1,7 @@
+using System;
+using System.Data;
 using System.Dynamic;
+using Microsoft.VisualBasic;
 
 namespace Ejercicio_101
 {
@@ -38,7 +41,23 @@ namespace Ejercicio_101
     {
         public string EstudianteSolicitante{get;}
         public string ModeloSolicitado{get;}
-        
+        public DateTime FechaDeEntrega{get;}
+        public DateTime FechaDeDevolucion{get;}
+        public bool Activo{get;set;}
+
+        public Prestamo(string estudianteSolicitante, string modeloSolicitado, int DiasParadevolver=7 )
+        {
+            EstudianteSolicitante=estudianteSolicitante;
+            ModeloSolicitado=modeloSolicitado;
+            Activo=true;
+            FechaDeEntrega= DateAndTime.Now;
+            FechaDeDevolucion=FechaDeEntrega.AddDays(DiasParadevolver);
+        }
+        public void Finalizar()
+        {
+            Activo=false;
+        }
+
     }
 
     
